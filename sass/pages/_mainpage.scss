@@ -1,0 +1,77 @@
+
+.text-center {
+    font-family: $font-text;
+    text-align: center;
+    
+}
+.top-section {
+    background-color: $background-color;
+    padding-bottom: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+    h2 {
+        padding-top: 25px;
+        margin-top: 0;
+        
+        font-weight: bold;
+    }
+    p {
+        font-size: 17px;
+    }
+}
+.align-btn {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        position: absolute;
+        margin-left: 2.5%;
+        height: 26px;
+        width: 26px;
+        border-radius: 13px;
+        background-color: $color-primary;
+        color: $color-text-white;    
+    }
+    i {
+        width: 20px;
+        padding-right: 15px;
+        padding-left: 5px;
+    }
+}
+
+
+
+
+
+
+
+/* List main page 
+.list-space-between {
+    padding-right: 5%;
+}
+.border-list {
+    border: 1px solid $background-color;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px $background-color;
+    margin-bottom: 20px;
+}
+.cercle-numbers-list {
+    border-radius: 25px;
+    border: none;
+    background-color: $color-primary;
+}
+/* List restaurant *//*
+img {
+    object-fit: cover;
+    object-position: center;
+}
+.card-img {
+    width: 100%;
+
+}
+.list-restaurant {
+    display: flex;
+}*/

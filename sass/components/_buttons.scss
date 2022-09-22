@@ -1,0 +1,23 @@
+/* Button exploration */ 
+/* dégrader de couleur secondary top > primary bottom */
+.btn-explorer {
+    background-color: $color-secondary;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    color: $color-text-white;
+    @include box-shadow;
+}
+.btn-list {
+    font-family: $font-text;
+    background-color: $background-color;
+    padding-left: 35px;
+    text-align: start;
+    border: none;
+    border-radius: 15px;
+    margin-left: 5%;
+    width: 90%;
+    height: 60px;
+    @include box-shadow;
+}
