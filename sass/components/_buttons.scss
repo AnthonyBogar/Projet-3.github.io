@@ -2,22 +2,33 @@
 /* dégrader de couleur secondary top > primary bottom */
 .btn-explorer {
     background-color: $color-secondary;
-    width: 80%;
+    width: 55%;
     height: 50px;
     border: none;
     border-radius: 40px;
     color: $color-text-white;
     @include box-shadow;
 }
+/* hover violet sur le bouton + icone devient violet */ 
 .btn-list {
     font-family: $font-text;
     background-color: $background-color;
     padding-left: 35px;
+    font-weight: bold;
     text-align: start;
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     margin-left: 5%;
     width: 90%;
     height: 60px;
     @include box-shadow;
+    i {
+        color: $color-text-grey;
+        font-size:large;
+    }
+}
+.btn-new {
+    background-color: $color-tertiary;
+    position: absolute;
+    
 }

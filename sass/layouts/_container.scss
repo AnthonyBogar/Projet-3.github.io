@@ -1,0 +1,27 @@
+.footer {
+    font-family: $font-text;
+    background-color: $background-color-footer;
+    color: $color-text-white;
+    padding-left: 5%;
+    margin-bottom: 0;
+    height: 200px;
+    .logo-footer {
+        font-family: $font-title;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+    .footer-div {
+        display: flex;
+        flex-direction: space-between;
+        align-items: center;
+        i {
+            width: 20px;
+            font-size: 11px;
+        }
+        p {  
+            margin-bottom: 0;
+            margin-top: 7px;
+        }
+}
+}
