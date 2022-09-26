@@ -30,5 +30,15 @@
 .btn-new {
     background-color: $color-tertiary;
     position: absolute;
-    
+
+}
+.btn-command {
+    background-color: $color-secondary;
+    width: 55%;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    color: $color-text-white;
+    margin-bottom: 40px;
+    @include box-shadow; 
 }
