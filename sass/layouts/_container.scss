@@ -1,5 +1,26 @@
+.background-color {
+    background-color: $color-grey;
+}
+.border-none {
+    border: none;
+}
+.decoration-none {
+    text-decoration: none;
+    color: $color-black;
+}
+.font-bold {
+    font-weight: bold;
+}
+.btn-desktop {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 .main-section {
-    background-color: $background-color;
+    background-color: $color-grey;
     font-family: $font-text;
     padding-top: 20px;
     padding-left: 5%;
@@ -15,7 +36,7 @@
 .plate-details{
     display: flex;
     flex-direction: column;
-    background-color: $color-text-white;
+    background-color: $color-white;
     padding-left: 2%;
     padding-right: 5%;
     margin-bottom: 25px;
@@ -37,8 +58,8 @@
 }
 .footer {
     font-family: $font-text;
-    background-color: $background-color-footer;
-    color: $color-text-white;
+    background-color: darken($color-grey, 70%);
+    color: $color-white;
     padding-left: 5%;
     margin-bottom: 0;
     height: 200px;
@@ -62,3 +83,16 @@
         }
 }
 }
+/*.align-desktop {
+    @media screen and (min-width: 1200px) {
+        .research .fonctionnement {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+}*/
+/* bloc research à gauche et bloc fonctionnement à droite 
+    50% width chacun dès 1200px*/
+/* 1200px break point version desktop 2 images restaurants par ligne */

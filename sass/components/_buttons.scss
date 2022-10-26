@@ -1,30 +1,50 @@
 /* Button exploration */ 
 /* dégrader de couleur secondary top > primary bottom */
 .btn-explorer {
-    background-color: $color-secondary;
+    font-family: $font-text;
+    background: linear-gradient($color-secondary, $color-primary);
+    font-size: 16px;
     width: 55%;
+    max-width: 250px;
     height: 50px;
     border: none;
     border-radius: 40px;
-    color: $color-text-white;
+    color: $color-white;
     @include box-shadow;
+    transition: transform 800ms;
+    &:hover {
+        background-color: lighten($color-secondary, 5%);
+    }
 }
 /* hover violet sur le bouton + icone devient violet */ 
 .btn-list {
     font-family: $font-text;
-    background-color: $background-color;
+    font-size: large;
+    background-color: $color-grey;
     padding-left: 35px;
-    font-weight: bold;
     text-align: start;
     border: none;
     border-radius: 20px;
-    margin-left: 5%;
+    margin-left: 50px;
     width: 90%;
     height: 60px;
+    margin-right: 5%;
+    @media (min-width: 1200px) {
+        max-width: 400px;
+        min-width: 320px;
+        margin-left: 10px;
+    }
     @include box-shadow;
     i {
-        color: $color-text-grey;
+        color: darken($color-grey, 50%);
         font-size:large;
+    }
+    transition: transform 800ms;
+    &:hover {
+        background-color: lighten($color-primary, 35%);
+        i {
+            color: $color-primary;
+        }
     }
 }
 .btn-new {
@@ -38,7 +58,7 @@
     height: 50px;
     border: none;
     border-radius: 40px;
-    color: $color-text-white;
+    color: $color-white;
     margin-bottom: 40px;
     @include box-shadow; 
 }

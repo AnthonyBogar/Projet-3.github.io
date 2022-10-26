@@ -10,9 +10,9 @@
     }
     a{
         text-decoration: none;
-        color: $color-text-black;
+        color: $color-black;
     }
-    .icon-restaurant {
+    &__icon-restaurant {
     display: flex;    
     align-items: flex-start;
     position: absolute;
@@ -21,12 +21,5 @@
     }
 }    
 
-/*a {
-    text-decoration: none;
-    color: $color-text-black;
-}
-i {
-    font-size: xx-large;
-    position: absolute;
-}*/
+
 

@@ -1,5 +1,5 @@
 @mixin box-shadow {
-    box-shadow: 5px 5px 5px $box-shadow-color;
+    box-shadow: 5px 5px 5px darken($color-grey, 8%);
 }
 @mixin border-radius-img {
     border-radius: 20px;
