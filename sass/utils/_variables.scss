@@ -8,3 +8,8 @@ $color-grey : #F2F2F2;
 
 $font-title: 'Shrikhand';
 $font-text: 'Roboto';
+
+$breakpoints: (
+    tab: 650px,
+    desktop: 1200px
+);

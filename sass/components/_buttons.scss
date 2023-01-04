@@ -11,9 +11,11 @@
     border-radius: 40px;
     color: $color-white;
     @include box-shadow;
-    transition: transform 800ms;
+    transition: transform 1500ms;
     &:hover {
-        background-color: lighten($color-secondary, 5%);
+        opacity: 0.9;
+        box-shadow: 8px 8px 8px darken($color-grey, 8%);
+        /*background-color: lighten($color-secondary, $color-primary, 15%);*/
     }
 }
 /* hover violet sur le bouton + icone devient violet */ 
@@ -29,7 +31,7 @@
     width: 90%;
     height: 60px;
     margin-right: 5%;
-    @media (min-width: 1200px) {
+    @media (min-width: map-get($breakpoints, desktop)) {
         max-width: 400px;
         min-width: 320px;
         margin-left: 10px;
@@ -50,7 +52,12 @@
 .btn-new {
     background-color: $color-tertiary;
     position: absolute;
-
+    padding: 8px;
+    margin-left: -100px;
+    margin-top: 15px;
+    color: darken($color-tertiary, 35%);
+    border-radius: 2px;
+    font-weight: bold;
 }
 .btn-command {
     background-color: $color-secondary;
