@@ -1,8 +1,6 @@
-/* Button exploration */ 
-/* dégrader de couleur secondary top > primary bottom */
+/* Main Page */
 .btn-explorer {
     font-family: $font-text;
-    background: linear-gradient($color-secondary, $color-primary);
     font-size: 16px;
     width: 55%;
     max-width: 250px;
@@ -10,15 +8,10 @@
     border: none;
     border-radius: 40px;
     color: $color-white;
+    @include linear-gradient;
     @include box-shadow;
-    transition: transform 1500ms;
-    &:hover {
-        opacity: 0.9;
-        box-shadow: 8px 8px 8px darken($color-grey, 8%);
-        /*background-color: lighten($color-secondary, $color-primary, 15%);*/
-    }
+    @include lighter-button;
 }
-/* hover violet sur le bouton + icone devient violet */ 
 .btn-list {
     font-family: $font-text;
     font-size: large;
@@ -59,13 +52,18 @@
     border-radius: 2px;
     font-weight: bold;
 }
+/* Restaurants pages */
+
 .btn-command {
-    background-color: $color-secondary;
     width: 55%;
+    max-width: 250px;
     height: 50px;
+    font-size: 16px;
     border: none;
     border-radius: 40px;
     color: $color-white;
     margin-bottom: 40px;
     @include box-shadow; 
+    @include linear-gradient;
+    @include lighter-button;
 }

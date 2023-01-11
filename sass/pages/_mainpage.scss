@@ -19,7 +19,6 @@
         padding-bottom: 10px;
     }
 }
-
 .align-btn {
     display: flex;
     align-items: flex-start;
@@ -117,20 +116,22 @@
             padding-left: 3%;
             padding-right: 5%;
         }
-
+        i {
+            position: absolute;
+        }
+        .fa-solid {
+            /*color: transparent;
+            background-clip: text;
+            background-image: linear-gradient($color-secondary, $color-primary);*/
+            opacity: 0;
+            transition: all 800ms;
+            &:hover {    
+                opacity: 1;
+            } 
+        }
     }
 }
-.heart-full {
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient($color-secondary, $color-primary);
-    opacity: 0;
-    transition: all 800ms;
-    &:hover {    
-        opacity: 1; 
-    } 
-}
+
 
 
 
