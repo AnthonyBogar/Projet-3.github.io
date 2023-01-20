@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-h1 {
-  font-family: "Shrikhand";
-}
-
 html {
   font-family: "Roboto";
 }
@@ -29,16 +25,16 @@ html {
 
 .btn-list {
   font-family: "Roboto";
-  font-size: large;
+  font-size: 16px;
   background-color: #F2F2F2;
   padding-left: 35px;
   text-align: start;
   border: none;
   border-radius: 20px;
-  margin-left: 50px;
+  margin-left: 30px;
   width: 90%;
   height: 60px;
-  margin-right: 5%;
+  margin-right: 20px;
   box-shadow: 5px 5px 5px #dedede;
   transition: transform 800ms;
 }
@@ -165,46 +161,86 @@ html {
 
 /* Restaurants pages */
 .main-section {
+  height: auto;
   background-color: #F2F2F2;
   font-family: "Roboto";
   padding-top: 20px;
   border-radius: 40px 40px 0 0;
+  /*transform: translateY(-50px);*/
   padding-left: 5%;
   padding-right: 5%;
-  transform: translateY(-50px);
+}
+
+.img-background {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .plate-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
-  padding-left: 2%;
-  padding-right: 5%;
-  padding-top: 5px;
+  align-items: center;
+  padding-left: 20px;
   margin-bottom: 20px;
-  height: 70px;
+  height: 60px;
   box-shadow: 5px 5px 5px #dedede;
   border-radius: 15px;
 }
-.plate-details p {
-  margin-top: 5px;
-  margin-bottom: 5px;
+.plate-details__1 {
+  width: 80%;
+  padding-right: 15px;
 }
-.plate-details .price {
+.plate-details__1 p {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-overflow: ellipsis;
+}
+.plate-details__2 {
+  width: 20%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding-right: 20px;
+  transform: translateY(12px);
 }
-.plate-details .price p {
-  font-size: 15px;
+.plate-details__3 {
+  width: 0%;
 }
-.img-background {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: relative;
+.plate-details__3 i {
+  background-image: white;
+  overflow: hidden;
+  color: #99E2D0;
+  font-size: 20px;
+  opacity: 0;
+  border-radius: 30px;
+  transition: transform(800ms ease);
+}
+.plate-details:hover .plate-details__1 {
+  max-width: 60%;
+}
+.plate-details:hover .plate-details__2 {
+  max-width: 20%;
+}
+.plate-details:hover .plate-details__3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.plate-details:hover .plate-details__3 i {
+  background-color: white;
+  opacity: 1;
 }
 
+/* Heart align */
 .space-title {
   margin-left: 30px;
 }
@@ -257,6 +293,19 @@ h2 {
   margin-top: 7px;
 }
 
+.heart-empty {
+  color: black;
+}
+
+.heart-full {
+  color: transparent;
+  opacity: 0;
+  content: "\f004";
+}
+.heart-full:hover {
+  opacity: 1;
+}
+
 .text-center {
   text-align: center;
 }
@@ -288,7 +337,7 @@ h2 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  margin-left: 40px;
+  margin-left: 20px;
   height: 26px;
   width: 26px;
   border-radius: 13px;
@@ -337,7 +386,6 @@ h2 {
 }
 .list-restaurant a {
   text-decoration: none;
-  color: black;
 }
 @media (min-width: 1200px) {
   .list-restaurant {
@@ -362,6 +410,7 @@ h2 {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 18px;
+  color: black;
 }
 .list-restaurant__card__img {
   height: 80%;
@@ -384,8 +433,8 @@ h2 {
   justify-content: space-between;
   align-items: center;
   height: 20%;
-  padding-left: 3%;
-  padding-right: 5%;
+  padding-left: 20px;
+  padding-right: 40px;
 }
 @media (min-width: 650px) {
   .list-restaurant__card__details {
@@ -394,16 +443,7 @@ h2 {
 }
 .list-restaurant__card i {
   position: absolute;
-}
-.list-restaurant__card .fa-solid {
-  /*color: transparent;
-  background-clip: text;
-  background-image: linear-gradient($color-secondary, $color-primary);*/
-  opacity: 0;
-  transition: all 800ms;
-}
-.list-restaurant__card .fa-solid:hover {
-  opacity: 1;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
