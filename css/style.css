@@ -298,12 +298,16 @@ h2 {
 }
 
 .heart-full {
-  color: transparent;
-  opacity: 0;
-  content: "\f004";
-}
-.heart-full:hover {
+  /*color: blue;
   opacity: 1;
+  transition: transform(800ms ease);*/
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right bottom, red, blue);
+  /*&:hover {    
+      opacity: 1;
+  } */
 }
 
 .text-center {
