@@ -202,6 +202,7 @@ html {
 }
 .plate-details__2 {
   width: 20%;
+  max-width: 60px;
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
@@ -213,36 +214,37 @@ html {
 .plate-details__3 i {
   background-image: white;
   overflow: hidden;
-  color: #99E2D0;
+  color: transparent;
   font-size: 20px;
-  opacity: 0;
   border-radius: 30px;
-  transition: transform(800ms ease);
+  transition: rotateZ(-180deg);
 }
 .plate-details:hover .plate-details__1 {
   max-width: 60%;
 }
 .plate-details:hover .plate-details__2 {
-  max-width: 20%;
+  max-width: 60px;
 }
 .plate-details:hover .plate-details__3 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
-  min-width: 60px;
   height: 60px;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
+  transition: all 800ms ease;
 }
 .plate-details:hover .plate-details__3 i {
   background-color: white;
-  opacity: 1;
+  color: #99E2D0;
+  transition: all rotate(180deg) 800ms;
 }
 
 /* Heart align */
 .space-title {
   margin-left: 30px;
+  position: absolute;
 }
 
 .underline {
@@ -293,21 +295,25 @@ h2 {
   margin-top: 7px;
 }
 
+.align-heart {
+  transform: translateY(-15px);
+}
+
 .heart-empty {
   color: black;
+  font-size: x-large;
 }
 
 .heart-full {
-  /*color: blue;
-  opacity: 1;
-  transition: transform(800ms ease);*/
-  opacity: 1;
+  font-size: x-large;
+  color: transparent;
+  opacity: 0;
   background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right bottom, red, blue);
-  /*&:hover {    
-      opacity: 1;
-  } */
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: all 600ms ease;
+}
+.heart-full:hover {
+  opacity: 1;
 }
 
 .text-center {
