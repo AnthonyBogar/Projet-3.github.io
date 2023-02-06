@@ -30,8 +30,12 @@
     padding-top: 20px;
     border-radius: 40px 40px 0 0;
     top: 250px;
+    @media (min-width: map-get($breakpoints, large-desktop)){
+        min-height: 800px;
+    }
     @include padding;
 }
+
 .img-background {
     position: absolute;
     width: 100%;
@@ -83,7 +87,6 @@
             color: transparent;
             font-size: 20px;
             border-radius: 30px;
-            transition: rotateZ(-180deg);
         }       
     }
     &:hover {
@@ -104,13 +107,21 @@
             height: 60px;
             background-color: $color-tertiary;
             border-radius: 0 15px 15px 0;
-            transition: all 800ms ease;
+            transition: all 800ms;
             i {
                 background-color: white;
                 color: $color-tertiary;
-                transform: all rotate(180deg) 800ms;
+                animation: anim-check 800ms;
             }
         }
+    }
+}
+@keyframes anim-check {
+    0% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 .desktop-menu-align {
