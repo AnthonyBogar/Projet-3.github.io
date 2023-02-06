@@ -20,6 +20,31 @@
     }
 }
 
+/* boucle delay affichage plats des pages restaurants + animation */
+
+.bloc-plate {
+    visibility: hidden;
+    @for $i from 1 through 14 {
+    .t#{$i}{      
+        animation: fade-in 800ms ($i * 150ms) forwards;
+    }
+    }
+    @keyframes fade-in {
+        from {
+            width: 0%;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            visibility: visible;
+            width: 100%;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
 /* Restaurants pages */
 
 .main-section {
@@ -219,7 +244,7 @@ h2 {
     opacity: 0;
     background-clip: text;
     background-image: linear-gradient(to bottom right,$color-secondary, $color-primary);
-    transition: all 600ms ease;
+    transition: all 600ms ease-in;
     &:hover {    
         opacity: 1;
     }

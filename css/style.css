@@ -43,12 +43,6 @@ html {
   box-shadow: 5px 5px 5px #dedede;
   transition: all 800ms;
   transition: all 800ms;
-  /*&:hover {
-      background-color: lighten($color-primary, 35%);
-      i {
-          color: $color-primary;
-      }
-  }*/
 }
 @media (min-width: 1200px) {
   .btn-list {
@@ -175,6 +169,66 @@ html {
   .btn-desktop {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+
+/* boucle delay affichage plats des pages restaurants + animation */
+.bloc-plate {
+  visibility: hidden;
+}
+.bloc-plate .t1 {
+  animation: fade-in 800ms 150ms forwards;
+}
+.bloc-plate .t2 {
+  animation: fade-in 800ms 300ms forwards;
+}
+.bloc-plate .t3 {
+  animation: fade-in 800ms 450ms forwards;
+}
+.bloc-plate .t4 {
+  animation: fade-in 800ms 600ms forwards;
+}
+.bloc-plate .t5 {
+  animation: fade-in 800ms 750ms forwards;
+}
+.bloc-plate .t6 {
+  animation: fade-in 800ms 900ms forwards;
+}
+.bloc-plate .t7 {
+  animation: fade-in 800ms 1050ms forwards;
+}
+.bloc-plate .t8 {
+  animation: fade-in 800ms 1200ms forwards;
+}
+.bloc-plate .t9 {
+  animation: fade-in 800ms 1350ms forwards;
+}
+.bloc-plate .t10 {
+  animation: fade-in 800ms 1500ms forwards;
+}
+.bloc-plate .t11 {
+  animation: fade-in 800ms 1650ms forwards;
+}
+.bloc-plate .t12 {
+  animation: fade-in 800ms 1800ms forwards;
+}
+.bloc-plate .t13 {
+  animation: fade-in 800ms 1950ms forwards;
+}
+.bloc-plate .t14 {
+  animation: fade-in 800ms 2100ms forwards;
+}
+@keyframes fade-in {
+  from {
+    width: 0%;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -390,7 +444,7 @@ h2 {
   opacity: 0;
   background-clip: text;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  transition: all 600ms ease;
+  transition: all 600ms ease-in;
 }
 .heart-full:hover {
   opacity: 1;

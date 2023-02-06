@@ -36,12 +36,6 @@
     }
     transition: all 800ms;
     @include button-list-over-anim;
-    /*&:hover {
-        background-color: lighten($color-primary, 35%);
-        i {
-            color: $color-primary;
-        }
-    }*/
 }
 .btn-new {
     background-color: $color-tertiary;
