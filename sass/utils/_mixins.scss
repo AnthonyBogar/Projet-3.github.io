@@ -12,8 +12,9 @@
     padding-right: 5%;
 }
 @mixin lighter-button {
-    transition: transform 1500ms ease;
+    transition: all 800ms;
     &:hover {
+        transform:scale(1.05);
         opacity: 0.9;
         box-shadow: 8px 8px 8px darken($color-grey, 15%);
     }
@@ -21,5 +22,13 @@
 @mixin linear-gradient {
     background: linear-gradient($color-secondary, $color-primary);
 }
-
+@mixin button-list-over-anim {
+    transition: all 800ms;
+    &:hover {
+        background-color: lighten($color-primary, 35%);
+        i {
+            color: $color-primary;
+        }
+    }
+}
 

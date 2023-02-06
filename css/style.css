@@ -20,9 +20,10 @@ html {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 5px 5px 5px #dedede;
-  transition: transform 1500ms ease;
+  transition: all 800ms;
 }
 .btn-explorer:hover {
+  transform: scale(1.05);
   opacity: 0.9;
   box-shadow: 8px 8px 8px #cccccc;
 }
@@ -40,7 +41,14 @@ html {
   height: 60px;
   margin-right: 20px;
   box-shadow: 5px 5px 5px #dedede;
-  transition: transform 800ms;
+  transition: all 800ms;
+  transition: all 800ms;
+  /*&:hover {
+      background-color: lighten($color-primary, 35%);
+      i {
+          color: $color-primary;
+      }
+  }*/
 }
 @media (min-width: 1200px) {
   .btn-list {
@@ -83,7 +91,7 @@ html {
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px #dedede;
   background: linear-gradient(#FF79DA, #9356DC);
-  transition: transform 1500ms ease;
+  transition: all 800ms;
 }
 @media (min-width: 1200px) {
   .btn-command {
@@ -92,6 +100,7 @@ html {
   }
 }
 .btn-command:hover {
+  transform: scale(1.05);
   opacity: 0.9;
   box-shadow: 8px 8px 8px #cccccc;
 }
