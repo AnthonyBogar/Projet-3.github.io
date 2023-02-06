@@ -12,10 +12,10 @@
     padding-right: 5%;
 }
 @mixin lighter-button {
-    transition: transform 1500ms;
+    transition: transform 1500ms ease;
     &:hover {
         opacity: 0.9;
-        box-shadow: 8px 8px 8px darken($color-grey, 8%);
+        box-shadow: 8px 8px 8px darken($color-grey, 15%);
     }
 }
 @mixin linear-gradient {

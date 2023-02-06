@@ -23,18 +23,21 @@
 /* Restaurants pages */
 
 .main-section {
+    position: relative;
     height: auto;
     background-color: $color-grey;
     font-family: $font-text;
     padding-top: 20px;
     border-radius: 40px 40px 0 0;
-    /*transform: translateY(-50px);*/
+    top: 250px;
     @include padding;
 }
 .img-background {
+    position: absolute;
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    height: auto;
 }
 .plate-details{
     display: flex;
@@ -56,15 +59,21 @@
             margin-top: 2px;
             margin-bottom: 2px;
             text-overflow: ellipsis;
-        }      
+        }
+        @media (min-width: map-get($breakpoints, tab)) {
+            width: 90%;
+        }     
     }
     &__2 {
         width: 20%;
-        max-width: 60px;
+        max-width: 40px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: end;
         padding-right: 20px;
-        transform: translateY(12px);    
+        transform: translateY(12px); 
+        @media (min-width: map-get($breakpoints, tab)) {
+            width: 40px;
+        }   
     }
     &__3 {
         width: 0%;
@@ -79,17 +88,19 @@
     }
     &:hover {
         .plate-details__1 {
-            max-width: 60%;
+            width: 60%;
+            @media (min-width: map-get($breakpoints, tab)) {
+                width: 90%;
+            }
         }
         .plate-details__2 {
-            max-width: 60px;
+            max-width: 40px;
         }
         .plate-details__3 {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-                  
+            width: 60px;    
             height: 60px;
             background-color: $color-tertiary;
             border-radius: 0 15px 15px 0;
@@ -97,16 +108,39 @@
             i {
                 background-color: white;
                 color: $color-tertiary;
-                
-                transition: all rotate(180deg) 800ms;
+                transform: all rotate(180deg) 800ms;
             }
         }
     }
 }
-
+.desktop-menu-align {
+    @media (min-width: map-get($breakpoints, desktop)){
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .bloc-plate {
+            min-width: 450px;
+            width: 45%;
+            padding-right: 20px;
+        }
+    }
+    @media (min-width: map-get($breakpoints, large-desktop)){
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .bloc-plate {
+            min-width: 450px;
+            width: 30%;
+            padding-right: 20px;
+        }
+    }
+}
 /* Heart align */
 
 .space-title {
+    margin-top: 5px;
     margin-left: 30px;
     position: absolute;
 }
@@ -125,6 +159,7 @@ h2 {
 /* For all pages */
 
 .footer {
+    position: relative;
     font-family: $font-text;
     background-color: darken($color-grey, 70%);
     color: $color-white;
@@ -132,6 +167,7 @@ h2 {
     margin-bottom: 0;
     height: 200px;
     margin-top: 0;
+    top: 250px;
     a {
         text-decoration: none;
         color: $color-white;
@@ -156,6 +192,8 @@ h2 {
         }
     }
 }
+
+/* Align heart + anim hover */
 
 .align-heart {
     transform: translateY(-15px);

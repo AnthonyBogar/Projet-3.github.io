@@ -1,4 +1,6 @@
-
+body {
+    margin: 0;
+}
 .text-center {
     text-align: center;
     
@@ -6,7 +8,7 @@
 .top-section {
     background-color: $color-grey;
     padding-bottom: 40px;
-    h2 {
+    h1 {
         padding-top: 40px;
         margin-top: 0;
         padding-left: 15%;
@@ -57,11 +59,6 @@
     margin-top: 2vw;
     padding-bottom: 50px;
     @include padding;
-    h2 {
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
 }
 .list-restaurant {
     display: flex;
@@ -86,6 +83,7 @@
         margin-bottom: 20px;    
         @include box-shadow;
         @include border-radius-img;
+       
         p {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -123,7 +121,9 @@
         }
     }
 }
-
+.footer-mainpage {
+    top: 0;
+}
 
 
 

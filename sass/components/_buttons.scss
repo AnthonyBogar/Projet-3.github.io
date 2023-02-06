@@ -63,6 +63,10 @@
     border-radius: 40px;
     color: $color-white;
     margin-bottom: 40px;
+    @media (min-width: map-get($breakpoints, desktop)) {
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
     @include box-shadow; 
     @include linear-gradient;
     @include lighter-button;

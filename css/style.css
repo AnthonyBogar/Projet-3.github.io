@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+h2 {
+  font-family: "Shrikhand";
+}
+
 html {
   font-family: "Roboto";
 }
@@ -16,11 +20,11 @@ html {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 5px 5px 5px #dedede;
-  transition: transform 1500ms;
+  transition: transform 1500ms ease;
 }
 .btn-explorer:hover {
   opacity: 0.9;
-  box-shadow: 8px 8px 8px #dedede;
+  box-shadow: 8px 8px 8px #cccccc;
 }
 
 .btn-list {
@@ -79,11 +83,17 @@ html {
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px #dedede;
   background: linear-gradient(#FF79DA, #9356DC);
-  transition: transform 1500ms;
+  transition: transform 1500ms ease;
+}
+@media (min-width: 1200px) {
+  .btn-command {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
 }
 .btn-command:hover {
   opacity: 0.9;
-  box-shadow: 8px 8px 8px #dedede;
+  box-shadow: 8px 8px 8px #cccccc;
 }
 
 .header {
@@ -161,20 +171,23 @@ html {
 
 /* Restaurants pages */
 .main-section {
+  position: relative;
   height: auto;
   background-color: #F2F2F2;
   font-family: "Roboto";
   padding-top: 20px;
   border-radius: 40px 40px 0 0;
-  /*transform: translateY(-50px);*/
+  top: 250px;
   padding-left: 5%;
   padding-right: 5%;
 }
 
 .img-background {
+  position: absolute;
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+  height: auto;
 }
 
 .plate-details {
@@ -200,13 +213,23 @@ html {
   margin-bottom: 2px;
   text-overflow: ellipsis;
 }
+@media (min-width: 650px) {
+  .plate-details__1 {
+    width: 90%;
+  }
+}
 .plate-details__2 {
   width: 20%;
-  max-width: 60px;
+  max-width: 40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   padding-right: 20px;
   transform: translateY(12px);
+}
+@media (min-width: 650px) {
+  .plate-details__2 {
+    width: 40px;
+  }
 }
 .plate-details__3 {
   width: 0%;
@@ -220,10 +243,15 @@ html {
   transition: rotateZ(-180deg);
 }
 .plate-details:hover .plate-details__1 {
-  max-width: 60%;
+  width: 60%;
+}
+@media (min-width: 650px) {
+  .plate-details:hover .plate-details__1 {
+    width: 90%;
+  }
 }
 .plate-details:hover .plate-details__2 {
-  max-width: 60px;
+  max-width: 40px;
 }
 .plate-details:hover .plate-details__3 {
   display: flex;
@@ -238,11 +266,39 @@ html {
 .plate-details:hover .plate-details__3 i {
   background-color: white;
   color: #99E2D0;
-  transition: all rotate(180deg) 800ms;
+  transform: all rotate(180deg) 800ms;
+}
+
+@media (min-width: 1200px) {
+  .desktop-menu-align {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .desktop-menu-align .bloc-plate {
+    min-width: 450px;
+    width: 45%;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1800px) {
+  .desktop-menu-align {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .desktop-menu-align .bloc-plate {
+    min-width: 450px;
+    width: 30%;
+    padding-right: 20px;
+  }
 }
 
 /* Heart align */
 .space-title {
+  margin-top: 5px;
   margin-left: 30px;
   position: absolute;
 }
@@ -263,6 +319,7 @@ h2 {
 
 /* For all pages */
 .footer {
+  position: relative;
   font-family: "Roboto";
   background-color: #404040;
   color: white;
@@ -270,6 +327,7 @@ h2 {
   margin-bottom: 0;
   height: 200px;
   margin-top: 0;
+  top: 250px;
 }
 .footer a {
   text-decoration: none;
@@ -295,6 +353,7 @@ h2 {
   margin-top: 7px;
 }
 
+/* Align heart + anim hover */
 .align-heart {
   transform: translateY(-15px);
 }
@@ -316,6 +375,10 @@ h2 {
   opacity: 1;
 }
 
+body {
+  margin: 0;
+}
+
 .text-center {
   text-align: center;
 }
@@ -324,7 +387,7 @@ h2 {
   background-color: #F2F2F2;
   padding-bottom: 40px;
 }
-.top-section h2 {
+.top-section h1 {
   padding-top: 40px;
   margin-top: 0;
   padding-left: 15%;
@@ -382,10 +445,6 @@ h2 {
   padding-bottom: 50px;
   padding-left: 5%;
   padding-right: 5%;
-}
-.bloc-restaurant h2 {
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .list-restaurant {
@@ -454,6 +513,10 @@ h2 {
 .list-restaurant__card i {
   position: absolute;
   margin-right: 10px;
+}
+
+.footer-mainpage {
+  top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
