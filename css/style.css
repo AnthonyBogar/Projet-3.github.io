@@ -23,7 +23,7 @@ html {
   transition: all 800ms;
 }
 .btn-explorer:hover {
-  transform: scale(1.05);
+  /*transform:scale(1.05);*/
   opacity: 0.9;
   box-shadow: 8px 8px 8px #cccccc;
 }
@@ -94,7 +94,7 @@ html {
   }
 }
 .btn-command:hover {
-  transform: scale(1.05);
+  /*transform:scale(1.05);*/
   opacity: 0.9;
   box-shadow: 8px 8px 8px #cccccc;
 }
@@ -541,6 +541,7 @@ body {
 .list-restaurant__card {
   width: 100%;
   margin-bottom: 20px;
+  transition: all 800ms;
   box-shadow: 5px 5px 5px #dedede;
   border-radius: 20px;
 }
@@ -588,6 +589,9 @@ body {
 .list-restaurant__card i {
   position: absolute;
   margin-right: 10px;
+}
+.list-restaurant__card:hover {
+  box-shadow: 8px 8px 8px #cccccc;
 }
 
 .footer-mainpage {

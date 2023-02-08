@@ -14,7 +14,7 @@
 @mixin lighter-button {
     transition: all 800ms;
     &:hover {
-        transform:scale(1.05);
+        /*transform:scale(1.05);*/
         opacity: 0.9;
         box-shadow: 8px 8px 8px darken($color-grey, 15%);
     }
@@ -30,5 +30,11 @@
             color: $color-primary;
         }
     }
+}
+@mixin darken-shadow-box {
+    transition: all 800ms;
+    &:hover {
+        box-shadow: 8px 8px 8px darken($color-grey, 15%);
+    }   
 }
 

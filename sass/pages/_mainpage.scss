@@ -81,9 +81,7 @@ body {
         }     
         width: 100%;       
         margin-bottom: 20px;    
-        @include box-shadow;
-        @include border-radius-img;
-       
+           
         p {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -119,6 +117,9 @@ body {
             position: absolute;
             margin-right: 10px;
         }
+        @include darken-shadow-box;
+        @include box-shadow;
+        @include border-radius-img;  
     }
 }
 .footer-mainpage {
