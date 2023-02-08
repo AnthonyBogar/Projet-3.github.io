@@ -221,13 +221,11 @@ html {
 @keyframes fade-in {
   from {
     width: 0%;
-    opacity: 0;
     transform: translateY(50px);
   }
   to {
     visibility: visible;
     width: 100%;
-    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -344,6 +342,7 @@ html {
     transform: rotate(0deg);
   }
 }
+/* Responsive menu des pages restaurants */
 @media (min-width: 1200px) {
   .desktop-menu-align {
     display: flex;
@@ -392,6 +391,28 @@ h2 {
   font-weight: lighter;
 }
 
+/* Align heart + anim hover */
+.align-heart {
+  transform: translateY(-15px);
+}
+
+.heart-empty {
+  color: black;
+  font-size: x-large;
+}
+
+.heart-full {
+  font-size: x-large;
+  color: transparent;
+  opacity: 0;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: all 600ms ease-in;
+}
+.heart-full:hover {
+  opacity: 1;
+}
+
 /* For all pages */
 .footer {
   position: relative;
@@ -426,28 +447,6 @@ h2 {
 .footer .footer-div p {
   margin-bottom: 0;
   margin-top: 7px;
-}
-
-/* Align heart + anim hover */
-.align-heart {
-  transform: translateY(-15px);
-}
-
-.heart-empty {
-  color: black;
-  font-size: x-large;
-}
-
-.heart-full {
-  font-size: x-large;
-  color: transparent;
-  opacity: 0;
-  background-clip: text;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  transition: all 600ms ease-in;
-}
-.heart-full:hover {
-  opacity: 1;
 }
 
 body {
@@ -596,6 +595,72 @@ body {
 
 .footer-mainpage {
   top: 0;
+}
+
+/* Loading page */
+.loading-fade-in {
+  animation: fade-in-mainpage 3000ms;
+}
+
+@keyframes fade-in-mainpage {
+  0%, 40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading {
+  visibility: hidden;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background: linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loading 2500ms ease;
+}
+.loading__center {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+}
+
+@keyframes loading {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  37% {
+    transform: rotate(240deg);
+  }
+  55% {
+    opacity: 1;
+  }
+  68% {
+    transform: rotate(610deg);
+  }
+  90% {
+    transform: rotate(690deg);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(730deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
