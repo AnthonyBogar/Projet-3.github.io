@@ -69,16 +69,15 @@
 .plate-details{
     display: flex;
     flex-direction: row;
-    justify-content : space-between;
     background-color: $color-white;
     align-items: center;
-    padding-left: 20px;
     margin-bottom: 20px;
     height: 60px;
     @include box-shadow;
     @include border-radius-btn;
     &__1 {
         width: 80%; 
+        padding-left: 20px;
         padding-right: 15px;
         p { 
             white-space: nowrap;
@@ -86,7 +85,7 @@
             margin-top: 2px;
             margin-bottom: 2px;
             text-overflow: ellipsis;
-        }
+        }    
         @media (min-width: map-get($breakpoints, tab)) {
             width: 90%;
         }     
@@ -105,7 +104,6 @@
     &__3 {
         width: 0%;
         i {
-            background-image: white;
             overflow: hidden;
             color: transparent;
             font-size: 20px;
@@ -114,7 +112,8 @@
     }
     &:hover {
         .plate-details__1 {
-            width: 60%;
+            max-width: 90%;
+            overflow: hidden;
             @media (min-width: map-get($breakpoints, tab)) {
                 width: 90%;
             }
@@ -130,10 +129,10 @@
             height: 60px;
             background-color: $color-tertiary;
             border-radius: 0 15px 15px 0;
-            transition: all 800ms;
-            i {
-                background-color: white;
-                color: $color-tertiary;
+            transition: all 800ms ease;
+            i { 
+                background-color: $color-tertiary;
+                color: $color-white;
                 animation: anim-check 800ms;
             }
         }
@@ -208,7 +207,9 @@ h2 {
     color: transparent;
     opacity: 0;
     background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(to bottom right,$color-secondary, $color-primary);
+    -webkit-background-image: linear-gradient(to bottom right,$color-secondary, $color-primary);
     transition: all 600ms ease-in;
     &:hover {    
         opacity: 1;     
@@ -239,7 +240,7 @@ h2 {
     }
     .footer-div {
         display: flex;
-        flex-direction: space-between;
+        justify-content: flex-start;
         align-items: center;
         i {
             width: 20px;
