@@ -11,14 +11,6 @@
 .font-bold {
     font-weight: bold;
 }
-.btn-desktop {
-    display: flex;
-    flex-direction: column;
-    @media (min-width: map-get($breakpoints, desktop)) {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
 
 /* boucle delay affichage plats des pages restaurants + animation */
 

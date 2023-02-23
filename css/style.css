@@ -61,6 +61,17 @@ html {
   color: #9356DC;
 }
 
+.btn-desktop {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .btn-desktop {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .btn-new {
   background-color: #99E2D0;
   position: absolute;
@@ -157,17 +168,6 @@ html {
 
 .font-bold {
   font-weight: bold;
-}
-
-.btn-desktop {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 1200px) {
-  .btn-desktop {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 }
 
 /* boucle delay affichage plats des pages restaurants + animation */
@@ -507,12 +507,7 @@ body {
 }
 
 .title-list {
-  padding-left: 50px;
-}
-@media (min-width: 1200px) {
-  .title-list {
-    padding-left: 5%;
-  }
+  padding-left: 5%;
 }
 
 .bloc-restaurant {

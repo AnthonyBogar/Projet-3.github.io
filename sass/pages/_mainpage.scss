@@ -47,10 +47,7 @@ body {
     }
 }
 .title-list {
-    padding-left: 50px;
-    @media (min-width: 1200px) {
         padding-left: 5%;
-    }
 }
 .bloc-restaurant {
     display: flex;
@@ -67,7 +64,6 @@ body {
     height: auto;
     a {
         text-decoration: none;
-        
     }
     @media (min-width: map-get($breakpoints, desktop)) {
         flex-direction: row;

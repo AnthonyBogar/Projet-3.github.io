@@ -37,6 +37,14 @@
     transition: all 800ms;
     @include button-list-over-anim;
 }
+.btn-desktop {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: map-get($breakpoints, desktop)) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 .btn-new {
     background-color: $color-tertiary;
     position: absolute;
